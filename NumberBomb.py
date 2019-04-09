@@ -15,7 +15,7 @@ while isGameOver == False:
             guessNumber = int(guessNumber)
 
             if guessNumber > maxNum or guessNumber < minNum:
-                print("輸入數字範圍錯誤！")
+                print(f"請輸入{minNum}~{maxNum}內任一數字！")
             elif guessNumber == bombNumber:
                 print(f"BOOM！爆爆數字為{bombNumber}！")
                 isGameOver = True         
@@ -24,4 +24,4 @@ while isGameOver == False:
             else:
                 maxNum = guessNumber - 1
         except:
-            print("請輸入數字！")
+            print("請輸入正確數字！")
